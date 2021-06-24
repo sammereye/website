@@ -278,7 +278,7 @@ footer {
   align-items: center;
   width: 100%;
   background-color: #0F1917;
-  margin-top: 200px;
+  margin-top: 20px;
   padding: 50px;
 }
 
@@ -307,4 +307,33 @@ footer .brands {
 .icon-box img {
   width: 50%;
   height: 50%;
+}
+
+
+
+@media only screen and (max-width: 1120px) {
+  .container {
+    width: 100%;
+    align-items: center;
+  }
+
+  .container header {
+    width: 90%;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  body {
+    position: absolute;
+  }
+
+
+  main .sub-container {
+    padding: 125px 35px;
+  }
+
+  .navbar .navbar-desktop {
+    display: none;
+  }
 }
