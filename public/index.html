@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sammer Aburumman - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/public/styles.css" />
+  </head>
+  <body>
+    <div class="alert"></div>
+    <div class="container">
+      <header>
+        <div class="logo">
+          <span class="first-name">Sammer</span>
+          <span class="last-name">Aburumman</span>
+        </div>
+        <div class="navbar">
+          <a href="#aboutMe" class="navbar-item">About Me</a>
+          <a href="#projects" class="navbar-item">Projects</a>
+          <!-- <a href="#resume" class="navbar-item">Resume</a> -->
+          <a href="#contactMe" class="navbar-item navbar-button">Contact Me</a>
+        </div>
+      </header>
+      <main>
+        <!-- MAIN -->
+        <div class="sub-container">
+          <div class="sub-header">Full Stack Web Developer</div>
+          <div class="divider"></div>
+          <div class="paragraph">Hi, my name is Sammer <span class="pronunciation">(sam·er)</span>. Currently, I am a full stack Ruby on Rails developer employed at Indiana University where I create internal web applications. My work focuses on helping facilitate clinical research and supporting the daily workflow of radiologists. My passion and motivation as a web developer is to create visually appealing web applications that are also practical and easy to use.
+          </div>
+        </div>
+        <!-- ABOUT ME -->
+        <div class="sub-container sub-container-dark">
+          <div id="aboutMe" class="sub-header">About Me</div>
+          <div class="divider"></div>
+          <div class="sub-sub-header">The beginning</div>
+          <div class="paragraph" style="font-size: 16px; line-height: 50px; text-indent: 50px; color: #c9cecd;">
+            Starting college, I initially wanted to get into cybersecurity. Admittedly, it wasn't for any reason other than the fact that I was fascinated by the technical complexity of the T.V. show Mr. Robot. However, just like most other freshmen in college, I was still looking for my true passion. That was until my second semester. I began taking an introductory programming class that utilized JavaScript as the programming language of choice and I was hooked on it. I found that being able to create anything programmatically and visually amazed me. Within a month or two of the class starting, I had already finished a majority of the curriculum. I was actually binging classwork. Since I had already completed the class early, I decided to start taking a Udemy course titled <em>"The Complete JavaScript Course: From Zero to Expert!"</em> by Jonas Schmedtmann. Since then, I have gone on to enroll in 11 other Udemy courses to learn more about full stack web development on my own time. Following my second semester at Indiana University-Purdue University of Indianapolis (IUPUI), I made the decision to switch my major to Computer Information Technology (CIT) with a focus in web development.
+          </div>
+          <div class="sub-sub-header">Teaching myself through college</div>
+          <div class="paragraph" style="font-size: 16px; line-height: 50px; text-indent: 50px; color: #c9cecd;">
+            As my time in college went on, I kept learning about web development and started working on small projects on my own time. The most notable project that I started was a learning management system (LMS) for a fictional school that I called Westriver High School. On the <a href="#westriver">Westriver High School LMS</a>, students were able to login and view their class details. This project is what eventually led me to getting a student trainee position at the Indiana University School of Medicine (IUSM) during my junior year.
+          </div>
+          <div class="sub-sub-header">Getting my foot in the door</div>
+          <div class="paragraph" style="font-size: 16px; line-height: 50px; text-indent: 50px; color: #c9cecd;">
+            During my time as a student trainee at IUSM, I worked on two independent projects. The first was a PowerShell script that removed former employee permissions in the shared drive. This led to the removal of roughly 2,000,000 individual permissions. It also changed the owner of each folder within the shared drive to the organization's IT administrator account rather than the actual creator of the folder. My second project was the <a href="#recistCalculator">RECIST Calculator</a>. This was my main project as a student and allowed me to learn quite extensively about the entire MVC architecture of Ruby on Rails.
+          </div>
+          <div class="sub-sub-header">Following Graduation</div>
+          <div class="paragraph" style="font-size: 16px; line-height: 50px; text-indent: 50px; color: #c9cecd;">
+            Following my graduation from IUPUI with a Bachelors of Science in Computer Information Technology (CIT), I was offered a promotion to be a full time Programmer/Analyst at the IU School of Medicine. Just prior to this, I had interviewed at multiple companies such as Expensify, the University of Wisconsin-Madison and Relatient. In the end, I decided to accept the promotion and transition from a student trainee to a full time programmer. Since being hired full time, I have completed the final work needed for the <a href="#recistCalculator">RECIST Calculator</a> and have begun working on <a href="#doris2">DORISv2 (Dig our RIS)</a>.
+          </div>
+        </div>
+        <!-- PROJECTS -->
+        <div class="sub-container">
+          <div id="projects" class="sub-header">Projects</div>
+          <div class="divider"></div>
+          <div class="project-container">
+            <div class="project-header" id="doris2">DORISv2 (Dig our RIS)</div>
+            <div class="project-date">2020 &mdash; Ongoing</div>
+            <div class="project-tags">
+              <div class="project-tag">Ruby on Rails</div>
+              <div class="project-tag">ElasticSearch</div>
+              <div class="project-tag">JavaScript</div>
+              <div class="project-tag">MSSQL Server</div>
+            </div>
+            <div class="project-image">
+              <img src="/public/images/doris2.jpg" />
+            </div>
+
+            <div class="project-description-container">
+              <div class="project-description">
+                <div class="project-description-header">WHAT</div>
+                <div class="project-description-body">DORISv2, which stands for Dig our RIS, is a Ruby on Rails web application that gives researchers and physicians the ability to query through patient exams. Users are able to search and filter based on their needs and then output the data to .csv format.</div>
+              </div>
+              <div class="project-description">
+                <div class="project-description-header">WHY</div>
+                <div class="project-description-body">Since patient-study data comes from multiple sources, there is a need for a centralized application that allows users to search through the entire organization's studies. Due to technological and design advancements, the first version of DORIS was created roughly 10 years ago and was in need of an overhaul.</div>
+              </div>
+              <div class="project-description">
+                <div class="project-description-header">HOW</div>
+                <div class="project-description-body">It all starts with the data inflow. The DORISv2 data comes from four independent sources. To streamline the process as much as possible, I setup an API that takes in HL7 messages, parses the data as needed and inserts it into each table. The report text of the study is then indexed through Elasticsearch and made available to be searched for on the front-end. The design of the application utilizes an IU framework called Rivet that is meant to normalize the design style across all Indiana University websites/applications. To handle the search functionality, jQuery Ajax is used to create POST API request to retrieve searches without the need to refresh the page.</div>
+              </div>
+              <div class="project-description">
+                <div class="project-description-header">WHO</div>
+                <div class="project-description-body">DORISv2 has multiple use cases and users. The primary use case is to allow researchers to search for specific keywords and then filter the results down to a dataset they can use in their research. Another use case is for administration to understand the productivity levels of sections and their individual radiologists.</div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="project-container">
+            <div class="project-header" id="recistCalculator">RECIST Calculator</div>
+            <div class="project-date">2019 &mdash; 2021</div>
+            <div class="project-tags">
+              <div class="project-tag">Ruby on Rails</div>
+              <div class="project-tag">JavaScript</div>
+              <div class="project-tag">MSSQL Server</div>
+            </div>
+            <div class="project-image">
+              <img src="/public/images/recist1.jpg" />
+            </div>
+
+            <div class="project-description-container">
+              <div class="project-description">
+                <div class="project-description-header">WHAT</div>
+                <div class="project-description-body">The RECIST Calculator is a Ruby on Rails web application that allows radiologists and oncologists to add patients, add associated lesions/tumors and enter in measurements each time they visit for an appointment. The measurement data is then used to track how the patient is progressing throughout their treatment.</div>
+              </div>
+              <div class="project-description">
+                <div class="project-description-header">WHY</div>
+                <div class="project-description-body">Prior to the RECIST Calculator, radiologists and oncologists would store individual patient visits in a shared drive. This led to major organization and patient visitation issues. A singular web application that stores all of the patient data in MSSQL database keeps everything simple and error-resistant.</div>
+              </div>
+              <div class="project-description">
+                <div class="project-description-header">HOW</div>
+                <div class="project-description-body">The RECIST Calculator works by having radiologist and/or oncologists enter in patient data and then regularly update lesion/tumor measurements. It all runs on Ruby on Rails and the data is inserted and retrieved from a MSSQL server. Quite a bit of the heavy work is done on the front end such as creating charts, allowing printing and formatting data within structured tables. On the back-end, calculations are made to determine the trends of the treatment and to store relevant data. Another thing to highlight is the need to secure Protected Health Information (PHI). This is done by logging all interactions such as viewing a patient or adding notes.</div>
+              </div>
+              <div class="project-description">
+                <div class="project-description-header">WHO</div>
+                <div class="project-description-body">The primary stakeholder of the RECIST Calculator are the Riley Children's Hospital radiologists and oncologists. They had a need for an updated electronic system that allowed to them to update lesions/tumors and monitor treatments for their patients.</div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+          <div class="project-container">
+            <div class="project-header" id="westriver">Westriver High School LMS</div>
+            <div class="project-date">2017 &mdash; 2018</div>
+            <div class="project-tags">
+              <div class="project-tag">NodeJS</div>
+              <div class="project-tag">Express</div>
+              <div class="project-tag">MySQL</div>
+              <div class="project-tag">Handlebars</div>
+            </div>
+            <div class="project-image">
+              <img src="/public/images/westriver1.jpg" />
+            </div>
+
+            <div class="project-description-container">
+              <div class="project-description">
+                <div class="project-description-header">WHAT</div>
+                <div class="project-description-body">The Westriver High School Learning Management System (LMS) allows school administrators to create courses, multiple sections for each course, student accounts, teacher accounts, and departments. They can then link students to classes </div>
+              </div>
+              <div class="project-description">
+                <div class="project-description-header">WHY</div>
+                <div class="project-description-body">Learning Management Systems (LMS) are an essential part of modern day schooling. They allow schools to keep classes and their associated assignments all online. This allows students to access all of their classes from anywhere and complete their assignments at anytime.</div>
+              </div>
+              <div class="project-description">
+                <div class="project-description-header">HOW</div>
+                <div class="project-description-body">The Westriver High School LMS is created using NodeJS, Express, Handlebars and MySQL. NodeJS is the overlying runtime for processing JavaScript on the back-end. Express is then used as the framework for the site and helps facilitate the routing. Handlebars is the templating language that allows the application to dynamically show/modify data from the back-end to the front-end. Lastly, MySQL is the database that stores all of the data including login names and md5 hashed and salted passwords.</div>
+              </div>
+              <div class="project-description">
+                <div class="project-description-header">WHO</div>
+                <div class="project-description-body">Although Westriver High School is a fictional school, every school nowadays needs to be digital and keep up with the rising needs of students and parents. This is the approach that I felt could be a solution to a school's need.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- CONTACT ME -->
+        <div class="sub-container sub-container-dark">
+          <div id="contactMe" class="sub-header">Contact Me</div>
+          <div class="divider"></div>
+          <form id="contactForm">
+            <div class="split-container">
+              <div class="input-group">
+                <label for="name">Name</label>
+                <br />
+                <input type="text" id="name" name="name" placeholder="e.g. John Doe" required>
+              </div>
+              <div class="input-group">
+                <label for="email">Email</label>
+                <br />
+                <input type="email" id="email" name="email" placeholder="e.g. johndoe@gmail.com" required>
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="message">Message</label>
+              <br />
+              <textarea type="text" id="message" name="message" rows="5" placeholder="Type your message here" required></textarea>
+            </div>
+            <div class="flex-end">
+              <button type="submit">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+
+    <footer>
+       <div class="brands">
+         <a href="https://www.linkedin.com/in/sammerabu/" target="_blank" class="icon-box">
+            <img src="/public/icons/linkedin-in-brands.svg" alt="Linkedin Icon">
+         </a>
+         <a href="https://github.com/sammereye" target="_blank" class="icon-box">
+            <img src="/public/icons/github-brands.svg" alt="Github Icon">
+         </a>
+       </div> 
+       <div class="footer-text">Designed and Developed by Sammer &copy;</div>
+    </footer>
+
+    <script src="/public/jquery.min.js"></script>
+    <script src="/public/script.js"></script>
+  </body>
+</html>
