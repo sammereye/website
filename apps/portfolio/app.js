@@ -30,7 +30,7 @@ transporter.verify((error, success) => {
 });
 
 app.get('/', (req, res) => {
-  res.sendFile('./public/test.html');
+  res.sendFile(__dirname + '/apps/porfolio/public/index.html');
 });
 
 app.post('/submitContactForm', (req, res) => {
