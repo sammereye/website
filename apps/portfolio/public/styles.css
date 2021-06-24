@@ -224,7 +224,7 @@ main .sub-container-dark {
 
 .project-container .project-tags {
   display: flex;
-  margin-top: 10px;
+  flex-wrap: wrap;
 }
 
 .project-tags .project-tag {
@@ -235,6 +235,7 @@ main .sub-container-dark {
   margin-right: 20px;
   border-radius: 5px;
   letter-spacing: .5px;
+  margin-top: 10px;
 }
 
 .project-container .project-image {
@@ -324,9 +325,6 @@ footer .brands {
 
 
 @media only screen and (max-width: 600px) {
-  body {
-    position: absolute;
-  }
 
 
   main .sub-container {
