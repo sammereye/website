@@ -26,6 +26,7 @@ const credentials = {
 
 // Applications
 app.use('/', require('./apps/portfolio/app').app)
+app.use('/boilerplate', require('./apps/boilerplate/app').app)
 
 
 
