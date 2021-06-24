@@ -19,13 +19,14 @@ body {
 .alert {
   position: fixed;
   left: 50%;
-  top: -60px;
+  top: -100px;
   transform: translateX(-50%);
   background-color: #0F1917;
   border: 2px solid #fafafa;
   color: #fafafa;
   padding: 15px 40px;
   border-radius: 7px;
+  text-align: center;
 }
 
 .container {
@@ -298,6 +299,7 @@ footer .brands {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
   width: 45px;
   height: 45px;
   background-color: #fafafa;
@@ -305,9 +307,9 @@ footer .brands {
   margin: 12px;
 }
 
-.icon-box img {
-  width: 50%;
-  height: 50%;
+.icon-box i {
+  font-size: 24px;
+  color: black;
 }
 
 

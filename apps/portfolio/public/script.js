@@ -26,10 +26,10 @@ $(document).ready(() => {
         $('.alert').animate({
           top: "35px"
         }, {
-          duration: 500,
+          duration: 750,
           complete: function() {
             setTimeout(function() {
-              $('.alert').animate({top: '-60px'})
+              $('.alert').animate({top: '-100px'})
             }, 2000)
           }
         });
@@ -42,10 +42,10 @@ $(document).ready(() => {
         $('.alert').animate({
           top: "35px"
         }, {
-          duration: 500,
+          duration: 750,
           complete: function() {
             setTimeout(function() {
-              $('.alert').animate({top: '-60px'})
+              $('.alert').animate({top: '-100px'})
             }, 2000)
           }
         });
