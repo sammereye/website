@@ -1,7 +1,6 @@
 const root    = '../../';
 const modules = root + 'node_modules/';
 
-
 const mailer  = require(modules + 'nodemailer');
 const express = require(modules + 'express');
 const email   = require(root    + 'secrets/email');
