@@ -6,7 +6,7 @@ const express = require(modules + 'express');
 // Express Initialization
 const app = express();
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static(__dirname, { dotfiles: 'allow' }));
+app.use(express.static(__dirname + '/public', { dotfiles: 'allow' }));
 app.use(express.json());
 
 app.get('/', (req, res) => {

@@ -7,7 +7,7 @@ const express     = require('express');
 // Express Initialization
 const app = express();
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static(__dirname, { dotfiles: 'allow' }));
+// app.use(express.static(__dirname, { dotfiles: 'allow' }));
 app.use(express.json());
 app.use(helmet());
 
