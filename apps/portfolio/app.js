@@ -30,8 +30,7 @@ transporter.verify((error, success) => {
 });
 
 app.get('/', (req, res) => {
-  console.log(req.socket.remoteAddress )
-  res.sendFile(__dirname + '/public/index.html');
+  res.sendFile('./public/index.html');
 });
 
 app.post('/submitContactForm', (req, res) => {
