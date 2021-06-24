@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "forever -c 'nodemon -e * --delay 1000ms --exitcrash' app.js"
+    "start": "forever -c 'nodemon -e * --delay 5000ms --exitcrash' app.js"
   },
   "author": "",
   "license": "ISC",
