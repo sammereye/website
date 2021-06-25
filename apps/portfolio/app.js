@@ -33,27 +33,40 @@ transporter.verify((error, success) => {
   }
 });
 
+// Spam Protection
+var ips = {};
+
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/index.html');
 });
 
 app.post('/submitContactForm', (req, res) => {
-  const data = req.body;
-  const mail = {
-    from: '"sammer.xyz" temprsammer@gmail.com',
-    to: 'iamsammert@gmail.com',
-    subject: 'New Message',
-    html: `From: ${data.name} (${data.email}) <br/><br/> Message: ${data.message}`
+  if (!(req.socket.remoteAddress in ips)) {
+    ips[req.socket.remoteAddress] = 0;
   }
 
-  transporter.sendMail(mail, (err, data) => {
-    if (err) {
-      console.log(error);
-      res.status(500).send('Failed to send message');
-    } else {
-      res.status(200).send('Message sent!');
+  if (ips[req.socket.remoteAddress] <= 2) {
+    res.status(200).send('Message sent!')
+    const data = req.body;
+    const mail = {
+      from: '"sammer.xyz" temprsammer@gmail.com',
+      to: 'iamsammert@gmail.com',
+      subject: 'New Message',
+      html: `From: ${data.name} (${data.email}) <br/><br/> Message: ${data.message}<br/><br/> IP: ${req.socket.remoteAddress}`
     }
-  });
+
+    transporter.sendMail(mail, (err, data) => {
+      if (err) {
+        console.log(error);
+        res.status(500).send('Failed to send message');
+      } else {
+        ips[req.socket.remoteAddress] += 1;
+        res.status(200).send('Message sent!');
+      }
+    });
+  } else {
+    res.status(500).send('Failed to send message');
+  }
 });
 
 module.exports.app = app;

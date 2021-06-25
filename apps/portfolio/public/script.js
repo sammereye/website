@@ -72,7 +72,9 @@ $(document).ready(() => {
         nameField.val('');
         emailField.val('');
         messageField.val('');
-      } else {
+      }
+    }).fail((xhr, status, error) => {
+      if (status == 'error') {
         $('.alert').text('Message failed to send')
         $('.alert').animate({
           top: "35px"
