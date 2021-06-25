@@ -9,12 +9,38 @@ $(document).ready(() => {
 
 
   $('.navbar-bars').on('click', (e) => {
-    $(e.target).parent().html('<i class="far fa-times"></i>');
+    if ($(e.currentTarget).children().first().hasClass('fa-bars')) {
+      $(e.currentTarget).html('<i class="far fa-times"></i>');
 
-    let navbarHeight = $(window).height() - $('header').outerHeight();
+      
+      $('.navbar-mobile').animate({
+        top: "0"
+      }, {
+        duration: 250,
+        complete: function() {
+          $(e.currentTarget).css('color', '#fafafa')
+        }
+      });
+    } else {
+      $(e.currentTarget).html('<i class="far fa-bars"></i>');
+
+      $(e.currentTarget).css('color', '#0F1917')
+      $('.navbar-mobile').animate({
+        top: `${$(window).height() + 50}px`
+      }, {
+        duration: 250,
+        complete: function() {
+          
+        }
+      });
+    }
+
+
+
     
-    $('.navbar-mobile').animate({top: `0`})
   })
+
+  
 
   $('#contactForm').on('submit', (e) => {
     e.preventDefault();

@@ -88,12 +88,13 @@ header .navbar {
   width: 30px;
   justify-content: center;
   align-items: center;
-  background-color: #fafafa;
+  background-color: transparent;
   border: none;
   color: #0F1917;
   font-size: 24px;
   border-radius: 50%;
   cursor: pointer;
+  z-index: 1;
 }
 
 .navbar .navbar-button {
