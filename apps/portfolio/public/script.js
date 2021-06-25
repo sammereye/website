@@ -7,6 +7,15 @@ $(document).ready(() => {
     }, 500);
   });
 
+
+  $('.navbar-bars').on('click', (e) => {
+    $(e.target).parent().html('<i class="far fa-times"></i>');
+
+    let navbarHeight = $(window).height() - $('header').outerHeight();
+    
+    $('.navbar-mobile').animate({top: `0`})
+  })
+
   $('#contactForm').on('submit', (e) => {
     e.preventDefault();
 

@@ -29,6 +29,14 @@ body {
   text-align: center;
 }
 
+.navbar-mobile {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #0F1917;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -73,6 +81,19 @@ header .navbar {
   font-weight: 500;
   text-decoration: none;
   color: #0F1917;
+}
+
+.navbar-bars {
+  display: none;
+  width: 30px;
+  justify-content: center;
+  align-items: center;
+  background-color: #fafafa;
+  border: none;
+  color: #0F1917;
+  font-size: 24px;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .navbar .navbar-button {
@@ -328,12 +349,19 @@ footer .brands {
 
 @media only screen and (max-width: 600px) {
 
-
   main .sub-container {
     padding: 125px 35px;
   }
 
+  .navbar {
+    margin-right: 20px;
+  }
+
   .navbar .navbar-desktop {
     display: none;
+  }
+
+  .navbar .navbar-bars {
+    display: flex;
   }
 }
