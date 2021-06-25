@@ -12,13 +12,13 @@ $(document).ready(() => {
     if ($(e.currentTarget).children().first().hasClass('fa-bars')) {
       $(e.currentTarget).html('<i class="far fa-times"></i>');
 
-      
       $('.navbar-mobile').animate({
         top: "0"
       }, {
         duration: 250,
         complete: function() {
           $(e.currentTarget).css('color', '#fafafa')
+          $('.navbar-mobile-list').fadeIn();
         }
       });
     } else {
@@ -34,11 +34,22 @@ $(document).ready(() => {
         }
       });
     }
+  });
 
 
+  $('.navbar-mobile-item').on('click', (e) => {
+    $('.navbar-bars').html('<i class="far fa-bars"></i>');
+    $('.navbar-bars').css('color', '#0F1917');
 
-    
-  })
+    $('.navbar-mobile').animate({
+      top: `${$(window).height() + 50}px`
+    }, {
+      duration: 250,
+      complete: function() {
+        
+      }
+    });
+  });
 
   
 
