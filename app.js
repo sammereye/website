@@ -10,6 +10,7 @@ app.use(express.urlencoded({ extended: false }));
 // app.use(express.static(__dirname, { dotfiles: 'allow' }));
 app.use(express.json());
 app.use(helmet());
+app.all('*', ensureSecure);
 
 // Certificate
 const privateKey  = fs.readFileSync('secrets/privkey.pem', 'utf-8');
@@ -41,3 +42,13 @@ httpServer.listen(80, () => {
 httpsServer.listen(443, () => {
   console.log('HTTPs server running on port 443');
 });
+
+function ensureSecure(req, res, next){
+  if(req.secure){
+    // OK, continue
+    return next();
+  };
+  // handle port numbers if you need non defaults
+  // res.redirect('https://' + req.host + req.url); // express 3.x
+  res.redirect('https://' + req.hostname + req.url); // express 4.x
+}
