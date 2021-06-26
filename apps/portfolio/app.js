@@ -1,9 +1,7 @@
 const root    = '../../';
-const modules = root + 'node_modules/';
-
-const mailer  = require(modules + 'nodemailer');
-const express = require(modules + 'express');
-const email   = require(root    + 'secrets/email');
+const mailer  = require('nodemailer');
+const express = require('express');
+const email   = require(root + 'secrets/email');
 
 // Express Initialization
 const app = express();
@@ -37,6 +35,7 @@ transporter.verify((error, success) => {
 var ips = {};
 
 app.get('/', (req, res) => {
+  console.log(req.sessionID);
   res.sendFile(__dirname + '/public/index.html');
 });
 

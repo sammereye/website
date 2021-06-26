@@ -1,0 +1,7 @@
+<h1>Todo List</h1>
+<ul class="todo-list">
+  {{#each todoList}}
+    <li>{{this.title}} - {{this.description}}</li>
+  {{/each}}
+  <li><input class="newTodoInput" type="text" /><button class="newTodo">Create</button></li>
+</ul>

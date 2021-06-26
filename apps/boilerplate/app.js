@@ -1,7 +1,5 @@
 const root    = '../../';
-const modules = root + 'node_modules/';
-
-const express = require(modules + 'express');
+const express = require('express');
 
 // Express Initialization
 const app = express();
