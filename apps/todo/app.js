@@ -16,7 +16,7 @@ app.set('views', __dirname + '/views')
 app.engine('hbs', handlebars({
   layoutsDir: __dirname + '/views/layouts',
   extname: 'hbs',
-  defaultLayout: 'index'
+  defaultLayout: '_index'
 }));
 app.set('view engine', 'hbs');
 
@@ -32,8 +32,15 @@ let User = require('./models/user').User;
 
 /* Index Page */
 app.get('/', (req, res) => {  
-  res.render('todo');
+  res.render('index');
 });
+
+
+/* Create Account Page */
+app.get('/createAccount', (req, res) => {  
+  res.render('createAccount');
+});
+
 
 /* Create Account POST */
 app.post('/createAccount', (req, res) => {
@@ -75,6 +82,12 @@ app.post('/createAccount', (req, res) => {
       })
     }
   });
+});
+
+
+/* Login Page */
+app.get('/login', (req, res) => {  
+  res.render('login');
 });
 
 
